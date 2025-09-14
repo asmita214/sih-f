@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
     /* Ocean-inspired color palette */
@@ -110,12 +106,23 @@ All colors MUST be HSL.
   }
 }
 
+/* Floating animation for the background */
+@keyframes float {
+  0% { transform: translateY(0px) translateX(0px); }
+  50% { transform: translateY(-15px) translateX(15px); }
+  100% { transform: translateY(0px) translateX(0px); }
+}
+
 @layer base {
   * {
     @apply border-border;
   }
-
   body {
-    @apply bg-background text-foreground;
+    /* Changed to a specific blue gradient with a background image */
+    @apply bg-gradient-to-br from-blue-100 to-cyan-100 dark:from-gray-900 dark:to-slate-900 text-foreground;
+    background-image: url("https://www.transparenttextures.com/patterns/water-wave.png");
+    background-size: cover;
+    animation: float 20s ease-in-out infinite;
   }
 }
+
