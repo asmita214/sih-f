@@ -1,4 +1,3 @@
-// src/components/ChatSidebar.jsx
 import React, { useEffect, useRef } from "react";
 import { Plus, MessageSquare } from "lucide-react";
 import { useChatContext } from "@/context/ChatContext";
@@ -25,7 +24,7 @@ export const ChatSidebar = () => {
         minWidth: 200.0,
         scale: 1.0,
         scaleMobile: 1.0,
-        color: 0x004477,
+        color: 0xA0E0FF, // Changed to a lighter blue color
         shininess: 60,
         waveHeight: 20,
         waveSpeed: 1.0,
@@ -48,7 +47,7 @@ export const ChatSidebar = () => {
     <div
       ref={sidebarRef}
       className="min-h-screen w-80 flex flex-col relative text-white"
-      style={{ background: "transparent" }} /* ensure Vanta canvas is visible */
+      style={{ background: "transparent" }}
     >
       {/* Header */}
       <div className="relative z-10 p-6 border-b border-white/20 flex items-center gap-3">

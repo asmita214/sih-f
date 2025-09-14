@@ -8,33 +8,54 @@
   height: 100vh;
 }
 
+:root {
+  --background: 210 40% 96.1%;
+  --foreground: 222.2 47.4% 11.2%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 47.4% 11.2%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 47.4% 11.2%;
+  --primary: 222.2 47.4% 11.2%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 222.2 47.4% 11.2%;
+  --radius: 0.5rem;
+  
+  /* New light bluish theme colors */
+  --gradient-ocean: linear-gradient(to right, hsl(190, 80%, 65%), hsl(210, 90%, 75%));
+  --gradient-surface: linear-gradient(to bottom, hsl(200, 50%, 95%), hsl(210, 60%, 98%));
+  --gradient-deep: linear-gradient(to bottom, hsl(220, 80%, 40%), hsl(240, 90%, 50%));
+  --shadow-ocean: 0 4px 14px rgba(66, 153, 225, 0.5);
+  --shadow-soft: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --shadow-floating: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
 body {
-  background-color: #0B1220;
-  color: white;
+  background-color: hsl(210, 60%, 98%); /* Light bluish background */
+  color: hsl(222.2, 47.4%, 11.2%); /* Dark text for contrast */
   font-family: 'Inter', sans-serif;
-}
-/* Styles for glowing dot and floating effect */
-body {
-  background-image: radial-gradient(circle, rgba(43, 211, 198, 0.1) 1px, transparent 1px);
-  background-size: 50px 50px;
-  animation: float-effect 40s linear infinite;
+  
+  /* Removed the dark themed animations */
+  background-image: none;
+  animation: none;
 }
 
-@keyframes float-effect {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 500px 500px;
-  }
-}
-
+/* Updated styles for glowing dot and floating effect to be more subtle on a light background */
 .glowing-dot {
     width: 12px;
     height: 12px;
-    background-color: #00E5FF;
+    background-color: #008CFF;
     border-radius: 50%;
-    box-shadow: 0 0 5px #00E5FF, 0 0 10px #00E5FF, 0 0 15px #00E5FF;
+    box-shadow: 0 0 5px #008CFF, 0 0 10px #008CFF, 0 0 15px #008CFF;
     animation: pulse-glow 2s infinite ease-in-out;
 }
 
