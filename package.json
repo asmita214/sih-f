@@ -66,15 +66,14 @@
     "vaul": "^0.9.9",
     "zod": "^3.25.76"
   },
-  "devDependencies": {
+ "devDependencies": {
     "@vitejs/plugin-react-swc": "^4.0.1",
     "autoprefixer": "^10.4.21",
     "eslint": "^9.32.0",
-    "lovable-tagger": "^1.1.9",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.17",
     "vite": "^5.4.19"
-  },
+},
   "overrides": {
     "react-day-picker": {
       "react": "$react"
